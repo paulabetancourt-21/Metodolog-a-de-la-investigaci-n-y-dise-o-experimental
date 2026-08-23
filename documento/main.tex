@@ -1,0 +1,18 @@
+\documentclass[12pt,letterpaper]{article}
+% Márgenes NTC 1486: verifica los valores exactos exigidos por tu programa
+\usepackage[top=3cm,bottom=3cm,left=4cm,right=2cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times} % Times New Roman 12pt; usa helvet si tu programa exige Arial
+\usepackage{setspace}
+\onehalfspacing % interlineado 1.5
+\usepackage{titlesec}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{referencias.bib}
+
+\begin{document}
+  \input{secciones/portada}
+  \tableofcontents \newpage
+  \input{secciones/introduccion}
+  % cada lección agrega su propia sección aquí
+\end{document}
