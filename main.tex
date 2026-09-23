@@ -1,0 +1,109 @@
+\documentclass[12pt,letterpaper]{article}
+
+% ===================== PAQUETES =====================
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage[numbers,sort]{natbib}
+
+% ===================== CONFIGURACIÓN GENERAL =====================
+\onehalfspacing
+\hypersetup{
+  colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black,
+  pdftitle={Precisión real versus percepción estudiantil: análisis comparativo de las estimaciones de tiempo de viaje de Google Maps en usuarios frecuentes de transporte urbano en la UPTC Tunja},
+  pdfauthor={Paula Andrea Betancourt Matamoros, Brayan Stiven Buitrago Pulido, Maira Suleima Rodríguez González},
+  pdfsubject={Metodología de la Investigación y Diseño Experimental},
+}
+
+
+% Numeración de secciones tipo "1.", "1.1", etc.
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+\titleformat{\section}{\centering\bfseries\large}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\bfseries\large}{\thesubsection}{0.5em}{}
+
+% Nombres en español
+\renewcommand{\contentsname}{Tabla de contenido}
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+% Caja para el estado "EN CONSTRUCCIÓN"
+\newtcbox{\enconstruccion}{on line, boxrule=0.4pt, colframe=orange!70!black,
+  colback=orange!5, arc=6pt, boxsep=1pt, left=4pt, right=4pt, top=1pt, bottom=1pt,
+  fontupper=\scriptsize\bfseries\color{orange!70!black}}
+
+\newcommand{\estado}[1]{\begin{center}\enconstruccion{#1}\end{center}}
+\newcommand{\notaseccion}[1]{\begin{center}\itshape\footnotesize #1\end{center}}
+
+% ===================== DATOS DEL DOCUMENTO =====================
+\newcommand{\tituloProvisional}{Precisión real versus percepción estudiantil: análisis comparativo de las estimaciones de tiempo de viaje de Google Maps en usuarios frecuentes de transporte urbano en la UPTC Tunja}
+
+\begin{document}
+
+% ===================== PORTADA =====================
+\input{secciones/portada}
+
+% ===================== TABLA DE CONTENIDO =====================
+\tableofcontents
+\newpage
+
+% ===================== ÍNDICE DE TABLAS =====================
+\listoftables
+\notaseccion{Aún no hay tablas incorporadas al cuerpo del documento. Se listan aquí a medida
+que cada fase incorpore tablas propias (matrices, resultados, operacionalización de
+variables, etc.).}
+\newpage
+
+% ===================== ÍNDICE DE FIGURAS =====================
+\listoffigures
+\notaseccion{Aún no hay figuras incorporadas al cuerpo del documento. Se listan aquí a medida
+que cada fase incorpore figuras propias (diagramas, gráficos, esquemas, etc.).}
+\newpage
+
+% ===================== SECCIONES =====================
+\input{secciones/introduccion}
+\newpage
+\input{secciones/justificacion}
+\newpage
+\input{secciones/objetivos}
+\newpage
+\input{secciones/alcance}
+\newpage
+\input{secciones/hipotesis}
+\newpage
+\input{secciones/variables}
+\newpage
+\input{secciones/marco_referencial}
+\newpage
+\input{secciones/diseno_metodologico}
+\newpage
+\input{secciones/resultados}
+\newpage
+\input{secciones/conclusiones}
+\newpage
+
+% ===================== REFERENCIAS =====================
+\section*{}
+\addcontentsline{toc}{section}{Referencias}
+\bibliographystyle{ieeetr}
+\bibliography{referencias}
+\notaseccion{Esta lista crece con cada sección que se redacte; la numeración se reajusta
+para mantener el orden de primera aparición en todo el documento.}
+\newpage
+
+% ===================== ANEXOS =====================
+\input{secciones/anexos}
+
+\end{document}
