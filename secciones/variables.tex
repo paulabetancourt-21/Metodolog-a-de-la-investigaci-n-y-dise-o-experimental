@@ -1,3 +1,35 @@
 \section{Variables}
 \estado{EN CONSTRUCCIÓN}
 \notaseccion{Definición nominal/conceptual en la Fase 3; operacionalización completa en la Fase 5.}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Clasificación y definición nominal-conceptual de las variables}
+  \label{tab:variables}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|p{4cm}|p{2.2cm}|p{8.3cm}|}
+    \hline
+    \textbf{Variable} & \textbf{Tipo} & \textbf{Definición nominal-conceptual} \\ \hline
+
+    Franja horaria (pico / no pico)
+    & Independiente
+    & Momento del día en que se realiza el trayecto, clasificado según el nivel habitual de congestión vehicular en el corredor estudiado. \\ \hline
+
+    Condiciones climáticas
+    & Independiente
+    & Estado atmosférico presente durante la medición del trayecto (por ejemplo, lluvia o clima despejado) que puede alterar la velocidad de desplazamiento. \\ \hline
+
+    Ocurrencia de eventos o cierres viales
+    & Independiente
+    & Presencia de obras, cierres o eventos no habituales en el corredor que puedan alterar el flujo vehicular durante la medición. \\ \hline
+
+    Diferencia entre tiempo estimado y tiempo real (error de estimación)
+    & Dependiente
+    & Magnitud de la discrepancia, en minutos, entre el tiempo que Google Maps indica antes de iniciar el trayecto y el tiempo efectivamente empleado en recorrerlo. \\ \hline
+
+    Comportamiento operativo del transporte público (paradas no programadas, alteración de ruta)
+    & Interviniente
+    & Variaciones en la forma en que opera el vehículo durante el trayecto, no manipuladas por el estudio pero que pueden influir en el tiempo real registrado, y que deben documentarse para no confundir su efecto con el de la franja horaria o el clima. \\ \hline
+
+  \end{tabular}
+\end{table}
