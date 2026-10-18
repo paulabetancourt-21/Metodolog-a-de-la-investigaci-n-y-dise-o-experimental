@@ -1,3 +1,39 @@
 \section{Marco referencial}
-\estado{EN CONSTRUCCIÓN}
-\notaseccion{Se redacta en la Fase 4 del Curso (Construcción del marco referencial).}
+
+\subsection{Marco conceptual}
+
+\paragraph{Movilidad urbana en ciudades intermedias.}
+Conjunto de desplazamientos que realizan las personas dentro de una ciudad para acceder a sus actividades cotidianas, determinado por la infraestructura vial, la oferta de transporte y los patrones de tráfico \cite{salvatierra2023}. Se habla de \emph{ciudad intermedia} para referirse a centros urbanos de escala media, como Tunja, cuyas condiciones de tráfico y de operación del transporte difieren de las de las grandes capitales, donde suelen calibrarse las soluciones de movilidad inteligente \cite{pulido2024}. En este estudio el término delimita el contexto: los desplazamientos urbanos de Tunja, sin incluir trayectos intermunicipales.
+
+\paragraph{Transporte público colectivo urbano.}
+Servicio de transporte de pasajeros prestado en vehículos de uso compartido (en Tunja, busetas) que operan sobre rutas definidas dentro de la ciudad, y cuya calidad se evalúa por aspectos como la regularidad y la organización del servicio \cite{munoz2019, sanchez2012}. En este estudio se considera exclusivamente este modo de transporte; quedan excluidos el vehículo particular, el taxi, la moto y el desplazamiento a pie, porque cada uno tiene dinámicas y estimaciones distintas en la aplicación.
+
+\paragraph{Aplicación de navegación (Google Maps).}
+Herramienta de software que indica la ubicación de un lugar y calcula la ruta y el tiempo de llegada combinando distancia, velocidad promedio y datos de tráfico \cite{salvatierra2023}. Sus estimaciones se apoyan principalmente en patrones históricos de tráfico, por lo que tienen limitaciones para anticipar sucesos puntuales \cite{thanuja2026, arxiv2017}. Los usuarios recurren a estas aplicaciones de forma habitual \cite{dahmani2020, elpais2026} y sus tiempos estimados influyen en cómo y cuándo deciden desplazarse \cite{peer2025}, de manera análoga a como los usuarios del transporte público ajustan sus rutas según la información que reciben \cite{kapatsila2025}. En este estudio se usa una única aplicación, Google Maps, en todas las mediciones, y no se evalúa su calidad técnica ni su algoritmo.
+
+\paragraph{Tiempo estimado.}
+Duración del trayecto que Google Maps indica antes de que el estudiante inicie el recorrido, entre el punto de origen y el punto de destino del corredor, en el sentido y la hora en que se realiza la medición. Es el mismo tipo de valor que otros estudios obtienen de las interfaces de programación de Google Maps para compararlo con los tiempos reportados por los viajeros \cite{bastarianto2025}. Se expresa en minutos.
+
+\paragraph{Tiempo real.}
+Duración efectivamente empleada en recorrer el trayecto, medida desde que el estudiante inicia el recorrido en el punto de origen hasta que llega al punto de destino. Se expresa en minutos y se registra en cada medición.
+
+\paragraph{Error de estimación.}
+Diferencia entre el tiempo real y el tiempo estimado de un mismo trayecto, expresada en minutos y como porcentaje del tiempo estimado. Se calcula como tiempo real menos tiempo estimado, de modo que un valor positivo indica que la aplicación subestimó la duración del trayecto y uno negativo, que la sobreestimó. Para describir su magnitud sin que los errores positivos y negativos se compensen, el estudio también emplea el error absoluto medio. Es la variable dependiente del estudio y corresponde a la brecha entre lo estimado y lo vivido que describen los antecedentes \cite{bastarianto2025, arxiv2017}.
+
+\paragraph{Estudiante usuario frecuente.}
+Estudiante de la UPTC que se desplaza en bus del transporte público colectivo urbano de Tunja hacia la universidad al menos tres veces por semana. En este estudio la población está compuesta por compañeros del curso de Metodología de la Investigación; esta delimitación no pretende representar a toda la población estudiantil de la UPTC.
+
+\paragraph{Corredor de estudio.}
+Tramo vial que inicia en la Av. Oriental \#2a6 y continúa por toda la Avenida Oriental hasta la entrada del edificio de posgrados de la UPTC, sede central, evaluado en ambos sentidos. Es el único espacio geográfico en el que se registran mediciones. Sus condiciones de congestión en horas de mayor demanda han sido señaladas en comunicaciones de la propia universidad \cite{uptc2022}.
+
+\paragraph{Franja horaria (hora pico y hora no pico).}
+Momento del día en que se realiza el trayecto, clasificado según el nivel habitual de congestión vehicular del corredor. La \emph{hora pico} corresponde al periodo en que la congestión alcanza su mayor nivel; la literatura la caracteriza comparando el tiempo de viaje en ese periodo con el de la hora no pico mediante la razón entre ambos tiempos \cite{susilo2018}. La \emph{hora no pico} agrupa los demás periodos del día. Los rangos horarios exactos de cada franja se fijarán en el diseño metodológico, a partir de las condiciones observadas en el corredor.
+
+\paragraph{Condiciones climáticas.}
+Estado atmosférico presente durante la medición del trayecto que puede alterar la velocidad de desplazamiento. Se ha documentado que la lluvia reduce la velocidad y aumenta el tiempo de viaje del transporte público, especialmente en rutas congestionadas y en horas pico \cite{sabir2010, ji2024}. Para efectos de este estudio se distinguen dos condiciones: \emph{con lluvia} y \emph{sin lluvia}. En Colombia, el IDEAM clasifica la lluvia diaria según su intensidad, desde ligera (0{,}1 a 10{,}0 mm) hasta torrencial (más de 60{,}1 mm) \cite{ideam2024}; esa escala puede servir de referencia si el estudio decide registrar la intensidad además de la presencia de lluvia.
+
+\paragraph{Eventos o cierres viales.}
+Presencia de obras, cierres o eventos no habituales en el corredor que alteran el flujo vehicular durante la medición. Las aplicaciones de navegación presentan fallas para informar cierres viales no programados, a causa de la naturaleza dinámica del entorno urbano \cite{hasan2022}. Cada trayecto se clasifica según haya o no un evento o cierre registrado; los criterios de registro se definirán en el diseño metodológico.
+
+\paragraph{Comportamiento operativo del transporte público.}
+Variaciones en la forma en que opera el vehículo durante el trayecto, como las paradas no programadas para recoger o dejar pasajeros, las rutas alteradas por decisión del conductor y los tiempos de espera irregulares entre unidades \cite{munoz2019}. Estas variaciones se relacionan con el tiempo que el bus permanece detenido en las paradas y con la confiabilidad del servicio \cite{arhin2015}. No son manipuladas por el estudio, pero se documentan como variable interviniente para no confundir su efecto con el de la franja horaria o el clima.
