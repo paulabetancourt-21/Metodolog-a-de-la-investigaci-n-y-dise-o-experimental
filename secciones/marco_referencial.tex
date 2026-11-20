@@ -9,22 +9,19 @@ Conjunto de desplazamientos que realizan las personas dentro de una ciudad para 
 Servicio de transporte de pasajeros prestado en vehículos de uso compartido (en Tunja, busetas) que operan sobre rutas definidas dentro de la ciudad \cite{munoz2019, sanchez2012}. En este estudio se considera únicamente este modo de transporte y, dentro de él, la Ruta 12.
 
 \paragraph{Aplicación de navegación (Google Maps).}
-Herramienta de software que indica la ubicación de un lugar y calcula rutas y tiempos estimados de llegada. En este estudio se usa una única aplicación, Google Maps, en la modalidad de transporte público, y no se evalúa su calidad técnica ni su algoritmo.
+Herramienta de software que indica la ubicación de un lugar y calcula rutas y tiempos estimados de llegada. En este estudio se usa una única aplicación, Google Maps, en modo automóvil, con los 9 puntos de referencia de la Ruta 12 (fuente: Tunja en Bus) como puntos intermedios, porque la aplicación no ofrece la Ruta 12 en modalidad de transporte público (para este tramo solo muestra un recorrido como a pie). No se evalúa su calidad técnica ni su algoritmo.
 
 \paragraph{Componentes del tiempo de viaje en transporte público.}
-El tiempo total de un viaje en bus se compone de la espera en la parada, la caminata de acceso y el recorrido a bordo del vehículo. Este estudio considera únicamente el \emph{recorrido a bordo}, tanto para el tiempo estimado como para el tiempo real, de modo que ambos se refieran al mismo trayecto y a los mismos componentes. % CONFIRMAR con el equipo: ver nota sobre la modalidad de Google Maps.
+El tiempo total de un viaje en bus se compone de la espera en la parada, la caminata de acceso y el recorrido del vehículo. Este estudio considera únicamente el recorrido del bus entre los dos puntos de observación. El tiempo real incluye las detenciones del bus en el trayecto; el estimado, al ser de automóvil, no.
 
 \paragraph{Tiempo estimado.}
-Duración del recorrido a bordo de la Ruta 12 que Google Maps indica, en la modalidad de transporte público, antes de que el estudiante inicie el trayecto entre el punto de origen (Los Hongos) y el punto de destino (semáforo de la Carrera 6.ª, UPTC), a la hora en que se realiza la medición. Se expresa en minutos y es un dato base.
+Duración, en minutos, que Google Maps indica en modo automóvil para ir de Los Hongos a la UPTC siguiendo el trazado de la Ruta 12, con los 9 puntos de referencia de la ruta (fuente: Tunja en Bus) como puntos intermedios, consultada en el momento en que el bus pasa por Los Hongos. Es un dato base.
 
 \paragraph{Tiempo real.}
-Duración efectivamente empleada en el recorrido a bordo de la Ruta 12, medida desde que el estudiante aborda la buseta en el punto de origen hasta que desciende en el punto de destino. Se expresa en minutos, se registra en cada medición y es un dato base.
+Minutos transcurridos entre el paso del bus por el semáforo de Los Hongos y su paso por el semáforo de la Carrera 6.ª (UPTC), calculado como la hora de paso por la UPTC menos la hora de paso por Los Hongos del mismo bus, identificado por la placa. Es un dato base.
 
 \paragraph{Error de estimación.}
-Diferencia entre el tiempo real ($T_{real}$) y el tiempo estimado ($T_{est}$) de un mismo trayecto: $E = T_{real} - T_{est}$. Un valor positivo indica que la aplicación subestimó la duración del trayecto y uno negativo, que la sobreestimó. Se expresa de tres formas: el \emph{error con signo} ($E$, en minutos); el \emph{error absoluto} ($|E|$, en minutos), que describe la magnitud sin que los errores positivos y negativos se compensen y del cual se obtiene el error absoluto medio; y el \emph{error porcentual} ($E\,\% = E / T_{est} \times 100$), cuyo denominador es el tiempo estimado. Es la variable dependiente del estudio y es derivada: se calcula a partir de los dos datos base y no se mide directamente.
-
-\paragraph{Estudiante usuario frecuente.}
-Estudiante de la UPTC que se desplaza en la Ruta 12 hacia la universidad al menos tres veces por semana. En este estudio la población está compuesta por compañeros del curso de Metodología de la Investigación; esta delimitación no pretende representar a toda la población estudiantil de la UPTC.
+Diferencia entre el tiempo real ($T_{\mathrm{real}}$) y el tiempo estimado ($T_{\mathrm{est}}$) de un mismo viaje: $E = T_{\mathrm{real}} - T_{\mathrm{est}}$. Un valor positivo indica que la aplicación subestimó la duración del viaje y uno negativo, que la sobreestimó. Se expresa de tres formas: el \emph{error con signo} ($E$, en minutos); el \emph{error absoluto} ($\lvert E \rvert$, en minutos), que describe la magnitud sin que los errores positivos y negativos se compensen y del cual se obtiene el error absoluto medio; y el \emph{error porcentual} ($E_{\%} = E / T_{\mathrm{est}} \times 100$), cuyo denominador es el tiempo estimado. Es la variable dependiente del estudio y es derivada: se calcula a partir de los dos datos base y no se mide directamente.
 
 \paragraph{Corredor de estudio.}
 Tramo de la Ruta 12 que va desde Los Hongos, sobre la Avenida Oriental, hasta el semáforo de la Carrera 6.ª, frente a la entrada del edificio de posgrados de la UPTC, sede central. Es el único espacio geográfico en el que se registran mediciones.
@@ -33,13 +30,16 @@ Tramo de la Ruta 12 que va desde Los Hongos, sobre la Avenida Oriental, hasta el
 Dirección en que se recorre el corredor. El estudio mide únicamente el sentido de ida (Los Hongos $\rightarrow$ UPTC); por tanto, es una constante del diseño y no una variable de análisis.
 
 \paragraph{Franja horaria (hora pico y hora no pico).}
-Momento del día en que se inicia el trayecto, clasificado antes del análisis según la periodización de un estudio de estudiantes de Ingeniería de Vías, cuyos datos se recolectaron frente a la parada de buses ubicada debajo del puente de la Universidad. La \emph{hora pico} abarca de 7:30 a 8:30 AM, de 11:30 AM a 1:30 PM, de 2:30 a 3:30 PM y de 4:30 a 6:00 PM; la \emph{hora no pico} agrupa el resto del horario, de 6:00 AM a 6:00 PM.
+Momento del día en que el bus pasa por Los Hongos, clasificado antes del análisis según la periodización de un estudio de estudiantes de Ingeniería de Vías. La \emph{hora pico} abarca de 7:30 a 8:30 a.m., de 11:30 a.m. a 1:30 p.m., de 2:30 a 3:30 p.m. y de 4:30 a 6:00 p.m.; la \emph{hora no pico} agrupa el resto del horario, de 6:00 a.m. a 6:00 p.m.
 
 \paragraph{Condiciones climáticas.}
-Estado atmosférico presente durante el trayecto que puede alterar la velocidad de desplazamiento. Para efectos de este estudio se distinguen dos condiciones: \emph{con lluvia}, cuando se observa lluvia en cualquier momento del recorrido a bordo, y \emph{sin lluvia}, en caso contrario. El estudio no registra la intensidad de la lluvia ni su acumulación diaria.
+Estado atmosférico presente cuando el bus pasa por Los Hongos, que puede alterar la velocidad de desplazamiento. Se distinguen dos condiciones: \emph{con lluvia}, cuando se registra llovizna, lluvia, lluvia fuerte o granizo al momento del paso por Los Hongos, y \emph{sin lluvia} en los demás casos. El estudio no registra la intensidad de la lluvia.
 
 \paragraph{Eventos o cierres viales.}
-Presencia de obras, cierres viales, accidentes u otros eventos no habituales en el corredor que afectan el flujo vehicular durante el trayecto. Cada trayecto se clasifica como \emph{con evento o cierre} si se registra alguno de ellos, y como \emph{sin evento o cierre} en caso contrario.
+Presencia de un inconveniente en la vía (marcha, accidente, obras, cierre vial, evento, parada prolongada u otro) registrado por el observador de Los Hongos al momento del paso del bus. Cada viaje se clasifica como \emph{con evento o cierre} si se registra alguno, y como \emph{sin evento o cierre} en caso contrario. Solo se observa lo visible desde el punto de medición.
+
+\paragraph{Ocupación visual.}
+Nivel de ocupación del bus al pasar por Los Hongos, estimado a ojo en una escala de A a F y agrupado en baja, media o alta. Es una variable exploratoria: se describe, pero no tiene hipótesis.
 
 \paragraph{Comportamiento operativo del transporte público.}
 Variaciones en la forma en que opera el vehículo durante el trayecto, como las paradas no programadas para recoger o dejar pasajeros, las rutas alteradas por decisión del conductor y los tiempos de espera irregulares entre unidades \cite{munoz2019}, que se relacionan con el tiempo que el bus permanece detenido en las paradas y con la confiabilidad del servicio \cite{arhin2015}. No son manipuladas ni registradas por el estudio; se reconocen como una fuente de variación no controlada que puede influir en el tiempo real.
