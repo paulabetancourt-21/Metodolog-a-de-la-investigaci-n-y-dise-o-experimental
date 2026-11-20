@@ -1,3 +1,71 @@
 \section{Diseño metodológico}
-\estado{EN CONSTRUCCIÓN}
-\notaseccion{Se redacta en la Fase 5 del Curso.}
+\subsection{Matriz de operacionalización}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\setlength{\emergencystretch}{3em}
+\caption{Matriz de operacionalización de las variables}
+\label{tab:operacionalizacion}
+\begin{tabular}{p{2.3cm} p{4.5cm} p{3.4cm} p{2.2cm} p{1.8cm}}
+\toprule
+\textbf{Variable} & \textbf{Indicador} & \textbf{Instrumento} & \textbf{Escala} & \textbf{Unidad} \\
+\midrule
+Tiempo estimado (dato base) &
+Duración, en minutos, que muestra Google Maps en modo automóvil para el trazado de la Ruta 12, con sus 9 puntos de referencia como puntos intermedios, consultada en el momento en que el bus pasa por Los Hongos. &
+Aplicación Google Maps en el celular; captura de pantalla de cada consulta. &
+Razón & Minutos enteros \\
+\addlinespace
+Tiempo real (dato base) &
+Hora de paso por el semáforo de la UPTC menos hora de paso por el semáforo de Los Hongos, del mismo bus (misma placa). &
+Planilla de registro con la hora de paso (hh:mm:ss) de cada bus en cada punto, con relojes de los celulares sincronizados.&
+Razón & Minutos (un decimal) \\
+\addlinespace
+Error de estimación (derivada, dependiente) &
+Error con signo: $E = T_{\mathrm{real}} - T_{\mathrm{est}}$. Error absoluto: $\lvert E \rvert$. Error porcentual: $E_{\%} = E / T_{\mathrm{est}} \times 100$. &
+Planilla de registro; se calcula a partir de los dos datos base, no se mide directamente. &
+Con signo: intervalo. Absoluto: razón. &
+Minutos; porcentaje \\
+\addlinespace
+Franja horaria &
+Hora de paso del bus por Los Hongos, clasificada como hora pico u hora no pico. &
+Hora de paso registrada en la planilla; rangos definidos abajo. &
+Nominal (dicotómica) & Pico / no pico \\
+\addlinespace
+Lluvia &
+Presencia de llovizna, lluvia, lluvia fuerte o granizo al momento del paso del bus por Los Hongos. &
+Observación directa del observador de Los Hongos, anotada en la planilla. &
+Nominal (dicotómica) & Sí / No \\
+\addlinespace
+Evento o cierre vial &
+Presencia, al momento del paso del bus por Los Hongos, de marcha, accidente, obras, cierre vial, evento, parada prolongada u otro inconveniente. El tipo se anota en observaciones. &
+Observación directa del observador de Los Hongos, anotada en la planilla. &
+Nominal (dicotómica) & Sí / No \\
+\addlinespace
+Ocupación visual (exploratoria) &
+Nivel de ocupación del bus al pasar por Los Hongos (A a F, convertido a pasajeros aproximados y agrupado en baja, media o alta). &
+Observación directa, anotada en la planilla. &
+Ordinal & A--F / baja, media, alta \\
+\addlinespace
+Sentido del recorrido (constante del diseño) &
+Dirección del viaje: ida, Los Hongos $\rightarrow$ UPTC, en todos los viajes. &
+Columna fija de la planilla. &
+Nominal & Ida (valor único) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Criterios de clasificación.}
+La \emph{franja horaria} se asigna antes del análisis con la hora en que el bus pasa por Los Hongos. Es hora pico si cae en 7:30 a 8:30 AM, 11:30 AM a 1:30 PM, 2:30 a 3:30 PM o 4:30 a 6:00 PM, según el estudio de Ingeniería de Vías citado; el resto de 6:00 AM a 6:00 PM es hora no pico. Cada rango incluye su hora inicial y excluye la final.
+
+La \emph{lluvia} se registra al momento del paso por Los Hongos. Cuenta como con lluvia si se anotó llovizna, lluvia, lluvia fuerte o granizo, y como sin lluvia en los demás casos (despejado, nublado, niebla). No se analiza la intensidad.
+
+El \emph{evento o cierre vial} se registra como <<inconveniente>> cuando el observador ve marcha, accidente, obras, cierre vial, evento o aglomeración, parada prolongada u otro, y se anota el tipo. Solo se observa lo visible desde los puntos de medición.
+
+La \emph{ocupación visual} se estima a ojo en una escala de A a F, se convierte a pasajeros aproximados con la tabla del banco de aforos y se agrupa en baja, media o alta. Es una variable exploratoria: se describe, pero no tiene hipótesis.
+
+El tiempo estimado se registra en minutos enteros; el tiempo real se calcula en minutos con un decimal a partir de horas registradas en hh:mm:ss; los promedios y el error porcentual se reportan con un decimal.
+
+\paragraph{Escalas de medición.}
+El tiempo estimado y el tiempo real son de razón: se miden en minutos, tienen un cero absoluto (ausencia de duración) y tiene sentido comparar duraciones como múltiplos. El error de estimación con signo, en minutos o en porcentaje, es de intervalo: es una diferencia entre dos tiempos, toma valores positivos y negativos y su cero indica ausencia de error. El error absoluto no puede ser negativo y se trata como de razón. La franja horaria, la lluvia, el evento o cierre vial y el sentido son nominales: solo clasifican cada viaje en categorías, sin una magnitud medida. La franja se trata como nominal porque se asigna por la hora de paso y no por un nivel de congestión medido. La ocupación visual es ordinal: sus niveles tienen un orden (baja, media, alta), pero la distancia entre ellos no es medible. Esta clasificación define cómo se resumen los datos: medias y variabilidad para el error, y conteos y proporciones para las categorías que forman los grupos comparados.
