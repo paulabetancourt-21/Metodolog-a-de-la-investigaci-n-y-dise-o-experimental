@@ -1,3 +1,197 @@
 \section{Resultados y discusión}
-\estado{EN CONSTRUCCIÓN}
-\notaseccion{Se redacta en la Fase 6 del Curso.}
+
+\subsection{Ejecución del protocolo}
+
+La medición se realizó durante cuatro jornadas consecutivas, del 9 al 12 de noviembre de 2026. En Los Hongos se registraron la placa y la hora de paso de cada bus de la Ruta 12, junto con el tiempo estimado por Google Maps, la ocupación visual, el clima y los inconvenientes viales; en la UPTC se registraron la placa y la hora de paso. En total se registraron 112 pasos en Los Hongos (28 por jornada) y 108 en la UPTC (27 por jornada).
+
+\paragraph{Desviaciones del protocolo.}
+La Tabla~\ref{tab:desviaciones} resume las desviaciones respecto al diseño metodológico y su efecto sobre los datos.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\caption{Desviaciones del protocolo durante la recolección}
+\label{tab:desviaciones}
+\begin{tabular}{p{3.6cm} p{4.4cm} p{4.4cm}}
+\toprule
+\textbf{Desviación} & \textbf{Causa} & \textbf{Efecto sobre los datos} \\
+\midrule
+Periodo de medición de 4 jornadas (9 al 12 de noviembre) en lugar de 2 semanas (1 al 14 de noviembre) & [CONFIRMAR: causa] & Menor número de viajes y de variación en las condiciones. \\
+\addlinespace
+7 pasos en Los Hongos sin pareja en la UPTC & [CONFIRMAR: placa no registrada, bus que no llegó a la UPTC o paso fuera del tope de 60 min] & Se excluyeron del análisis. \\
+\addlinespace
+3 pasos en la UPTC sin pareja en Los Hongos & [CONFIRMAR: causa] & No entran al análisis. \\
+\addlinespace
+Lluvia registrada solo el 9 y el 10 de noviembre & Condiciones climáticas de las jornadas. & La comparación con y sin lluvia coincide con la diferencia entre jornadas. \\
+\addlinespace
+11 viajes con paso por Los Hongos fuera de 6:00 a.m.--6:00 p.m. & Las jornadas incluyeron horarios no previstos en la definición de hora no pico. & Se clasificaron como hora no pico. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Preparación de los datos.}
+Se conservó una copia del libro original sin modificar y todos los cálculos se rehicieron a partir de las hojas de registro. Cada paso por Los Hongos se emparejó con el primer paso posterior de la misma placa en la UPTC, el mismo día y dentro de un máximo de 60 minutos. De 112 pasos registrados se emparejaron 105 (93,8\,\%); los 7 restantes se excluyeron por falta de pareja. Ningún paso quedó sin tiempo estimado ni sin placa, ningún paso de la UPTC se emparejó dos veces y no hubo tiempos reales menores o iguales a cero. El conjunto final quedó con $N = 105$ viajes (26, 26, 26 y 27 por jornada). Las placas se reemplazaron por códigos. La franja horaria se codificó con las cuatro ventanas definidas en el diseño; la lluvia (llovizna, lluvia, lluvia fuerte o granizo) y el evento o cierre vial, como variables dicotómicas, y la ocupación visual, como ordinal (A a F).
+
+\subsection{Estadística descriptiva}
+
+Las medidas se eligieron según la escala de cada variable: media y desviación estándar para el tiempo estimado, el tiempo real y el error de estimación (razón e intervalo); mediana y rango para la ocupación visual (ordinal); y frecuencias para las variables nominales. La Tabla~\ref{tab:descriptiva} presenta el conjunto total y la Tabla~\ref{tab:grupos}, los resultados separados por condición.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\caption{Estadísticos descriptivos del conjunto total ($N = 105$)}
+\label{tab:descriptiva}
+\begin{tabular}{p{4.3cm} c c c c}
+\toprule
+\textbf{Variable} & \textbf{Media} & \textbf{D. E.} & \textbf{Mín.} & \textbf{Máx.} \\
+\midrule
+Tiempo estimado (min) & 21,4 & 1,6 & 19,0 & 24,0 \\
+Tiempo real (min) & 30,7 & 6,3 & 20,5 & 45,5 \\
+Error con signo (min) & 9,4 & 5,1 & 1,5 & 22,5 \\
+Error absoluto (min) & 9,4 & 5,1 & 1,5 & 22,5 \\
+Error porcentual (\%) & 42,9 & 22,0 & 7,9 & 97,8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\caption{Error de estimación según la condición observada}
+\label{tab:grupos}
+\begin{tabular}{p{3.4cm} p{2.4cm} c c c}
+\toprule
+\textbf{Variable} & \textbf{Grupo} & \textbf{n} & \textbf{Error con signo (media $\pm$ D. E.)} & \textbf{Error absoluto (media)} \\
+\midrule
+Franja horaria & Pico & 55 & $9{,}3 \pm 5{,}0$ & 9,3 \\
+ & No pico & 50 & $9{,}4 \pm 5{,}3$ & 9,4 \\
+\addlinespace
+Lluvia & Con lluvia & 26 & $14{,}5 \pm 4{,}4$ & 14,5 \\
+ & Sin lluvia & 79 & $7{,}7 \pm 4{,}1$ & 7,7 \\
+\addlinespace
+Evento o cierre vial & Con evento & 25 & $16{,}2 \pm 3{,}4$ & 16,2 \\
+ & Sin evento & 80 & $7{,}2 \pm 3{,}4$ & 7,2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+En promedio, el tiempo real fue 9,4 minutos mayor que el estimado (42,9\,\%); la mediana del error fue de 8,9 minutos. El error fue positivo en los 105 viajes, es decir, Google Maps subestimó la duración en todos los casos, por lo que el error absoluto coincide con el error con signo. La franja horaria no mostró diferencia apreciable entre grupos (9,3 y 9,4 minutos), mientras que los viajes con lluvia (14,5 frente a 7,7 minutos) y con evento o cierre vial (16,2 frente a 7,2 minutos) tuvieron errores promedio mayores. Los 26 viajes con lluvia se concentraron el 9 y el 10 de noviembre (17 y 9 viajes); en las otras dos jornadas no llovió. De los 105 viajes, 25 tuvieron evento o cierre vial: marcha (14), accidente (5), obras (3), cierre vial (2) y parada prolongada (1); 12 de ellos coincidieron con lluvia. La ocupación visual tuvo una mediana de B (nivel 2; rango A--F), con la distribución A = 26, B = 29, C = 24, D = 13, E = 11 y F = 2 viajes. La interpretación de estas diferencias corresponde a la discusión.
+
+\subsection{Estadística inferencial}
+
+El estudio es transversal y observacional, sin asignación de grupos. Los 4 estudiantes son quienes tomaron los datos, no la muestra: la unidad de análisis es cada paso de un bus (105 recorridos emparejados), no cada estudiante.
+\begin{table}[H]
+\centering
+\caption{Resultados de las pruebas de hipótesis}
+\label{tab:pruebas_hipotesis}
+\small
+\renewcommand{\arraystretch}{1.5}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\textbf{Hipótesis} &
+\textbf{Variables (escala)} &
+\textbf{Prueba elegida} &
+\textbf{Estadístico y p} &
+\textbf{Tamaño del efecto} &
+\textbf{Decisión} \\ 
+\hline
+
+H1: real $>$ Google &
+Tiempo real y de Google del mismo bus (razón, pareadas) &
+$t$ pareada (Wilcoxon de respaldo) &
+$t(104) = 22.03$, $p < 0.001$ &
+$d_z = 2.15$; diferencia 9.28 min (IC 95 \%: 8.44 a 10.11) &
+Se rechaza $H_{0a}$ \\
+\hline
+
+H2: mayor diferencia en pico &
+Diferencia (razón) por franja (nominal, 2 grupos independientes) &
+$t$ de Welch (Mann-Whitney de respaldo) &
+$t(101.9) = 7.40$, $p < 0.001$ &
+$d = 1.43$; 5.05 min (3.69 a 6.40) &
+Se rechaza $H_{0b}$ \\
+\hline
+
+H3: mayor diferencia con lluvia &
+Diferencia (razón) por lluvia (nominal) &
+$t$ de Welch (Mann-Whitney de respaldo) &
+$t(49.5) = 6.74$, $p < 0.001$ &
+$d = 1.41$; 5.19 min (3.65 a 6.74) &
+Se rechaza $H_{0c}$ \\
+\hline
+
+\end{tabular}%
+}
+\end{table}
+Los datos son incompatibles con $H_0$ al nivel de significación 
+$\alpha = 0.05$, por lo que se rechaza $H_0$ en favor de $H_1$. 
+Dado el diseño observacional, este resultado describe una asociación 
+y no permite afirmar causalidad. Un valor $p$ no significativo 
+no demostraría que $H_0$ sea cierta, sino únicamente que no hubo 
+evidencia suficiente para rechazarla.
+\setlength{\parskip}{18pt}
+
+
+% DESCRIPCIÓN DE LA FIGURA 1
+
+La Figura 1 relaciona, para cada uno de los 105 recorridos emparejados,
+el tiempo estimado por Google Maps (eje horizontal) con el tiempo real
+medido entre Los Hongos y la UPTC (eje vertical). La línea punteada
+representa la igualdad entre ambos tiempos, de manera que un punto
+sobre ella indicaría que la estimación coincidió con la realidad.
+En esta figura, todos los puntos se ubican por encima de dicha línea,
+lo que indica que el tiempo real fue mayor que el estimado en todos
+los recorridos. Además, se observa una asociación positiva moderada
+entre ambas variables (coeficiente de correlación de Pearson,
+$r = 0.70$). Esto significa que, aunque los tiempos estimados más
+altos por Google Maps tienden a corresponder con tiempos reales
+más altos, la aplicación subestima sistemáticamente la duración
+del recorrido.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth]{fig1_dispersograma_google_vs_real.png}
+    \caption{Dispersograma de tiempo estimado y tiempo real}
+    \label{fig:dispersion}
+\end{figure}
+
+% DESCRIPCIÓN DE LA FIGURA 2
+
+La Figura 2 compara la diferencia entre el tiempo real y el estimado
+(en minutos) en los recorridos de hora pico ($n = 47$) y de hora no
+pico ($n = 58$). Cada caja muestra la mediana, el rango intercuartílico
+y los valores extremos, mientras que los puntos corresponden a cada
+recorrido. La mediana de la diferencia fue de 12.1 minutos en hora
+pico y de 6.0 minutos fuera de ella. Las cajas presentan poco
+solapamiento, lo que sugiere un error de estimación mayor durante
+la hora pico. Este patrón es el que se contrasta mediante la
+hipótesis 2; la figura muestra las diferencias observadas, mientras
+que la decisión sobre $H_0$ se establece mediante la prueba inferencial.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\linewidth]{fig2_caja_pico_vs_no_pico.png}
+    \caption{Diagrama de caja de la diferencia según la franja horaria}
+    \label{fig:caja_horaria}
+\end{figure}
+
+La Figura 3 compara la diferencia entre el tiempo real y el estimado
+en los recorridos sin lluvia ($n = 79$) y con lluvia ($n = 26$).
+La mediana fue de 7.9 minutos sin lluvia y de 12.8 minutos con lluvia.
+En el grupo con lluvia aparecen además algunos valores atípicos por
+encima de los 19 minutos. Esto indica que la estimación de Google Maps
+se aleja más de la realidad cuando llueve. Sin embargo, el grupo con
+lluvia es pequeño y sus observaciones pueden estar relacionadas con
+los recorridos realizados durante la hora pico, por lo que este efecto
+debe interpretarse con cautela.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{fig3_caja_lluvia.png}
+    \caption{Diagrama de caja de la diferencia según la lluvia}
+    \label{fig:caja_lluvia}
+\end{figure}
