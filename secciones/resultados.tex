@@ -1,3 +1,214 @@
 \section{Resultados y discusión}
-\estado{EN CONSTRUCCIÓN}
-\notaseccion{Se redacta en la Fase 6 del Curso.}
+
+\subsection{Ejecución del protocolo}
+
+\subsubsection{Desarrollo de la medición}
+
+El aforo se ejecutó en la Ruta 12 del transporte público colectivo de Tunja, en sentido de ida (Los Hongos $\rightarrow$ UPTC), con dos observadores ubicados de forma simultánea: uno en el semáforo de Los Hongos y otro en el semáforo de la Carrera 6.ª (UPTC). Siguiendo el instrumento definido en la matriz de operacionalización, cada observador registró en la planilla la hora de paso (hh:mm:ss) y la placa de cada bus, con los relojes de los celulares sincronizados, además de la ocupación visual (escala A--F). El observador de Los Hongos registró también el clima, la presencia de algún evento o cierre vial y su tipo. El tiempo estimado se obtuvo de Google Maps en modo automóvil, sobre el trazado de la Ruta 12 con sus nueve puntos de referencia como puntos intermedios, y se consultó en el momento en que cada bus pasó por Los Hongos.
+
+El periodo de medición comprendió del 1 al 14 de noviembre de 2026. Dentro de este periodo se ejecutaron ocho jornadas de observación, entre el 2 y el 13 de noviembre, con una duración total de 6,75 horas, como se resume en la Tabla~\ref{tab:jornadas}. Las jornadas cubrieron las franjas de mañana, media mañana, mediodía, tarde y última hora de la tarde. En total se obtuvieron $N = 50$ viajes emparejados por placa en los dos puntos de medición, correspondientes a 14 placas distintas; este es el tamaño de la muestra sobre el que se calculan todos los resultados.
+
+\begin{table}[H]
+\centering
+\caption{Jornadas de observación ejecutadas}
+\label{tab:jornadas}
+\small
+\begin{tabular}{@{}c l l l c L{3.6cm}@{}}
+\toprule
+\textbf{Jornada} & \textbf{Fecha} & \textbf{Día} & \textbf{Ventana horaria} & \textbf{Viajes} & \textbf{Clima predominante} \\
+\midrule
+1 & 02/11/2026 & Lunes (festivo) & 07:00--08:00 & 7 & Llovizna y lluvia \\
+2 & 04/11/2026 & Miércoles & 10:00--10:45 & 4 & Llovizna y lluvia \\
+3 & 05/11/2026 & Jueves & 14:00--14:45 & 6 & Nublado \\
+4 & 06/11/2026 & Viernes & 16:00--17:00 & 8 & Lluvia (fuerte entre 16:30 y 16:48) \\
+5 & 09/11/2026 & Lunes & 07:30--08:15 & 6 & Despejado y nublado \\
+6 & 10/11/2026 & Martes & 11:00--11:45 & 5 & Despejado \\
+7 & 12/11/2026 & Jueves & 14:00--14:45 & 5 & Nublado y despejado \\
+8 & 13/11/2026 & Viernes & 16:00--17:00 & 9 & Despejado y nublado \\
+\midrule
+\multicolumn{4}{@{}l}{\textbf{Total (6,75 h)}} & \textbf{50} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Desviaciones respecto al protocolo}
+
+Las desviaciones y condiciones no previstas se consolidan en la Tabla~\ref{tab:desviaciones}. Ninguna produjo pérdida de datos entre los viajes analizados: los 50 pasos registrados en Los Hongos tuvieron su paso correspondiente en la UPTC (100\,\% de emparejamiento) y no hubo datos faltantes en las variables del estudio.
+
+\begin{table}[H]
+\centering
+\caption{Registro de desviaciones del protocolo y su causa}
+\label{tab:desviaciones}
+\small
+\begin{tabular}{@{}L{3.6cm} L{3.3cm} L{7.5cm}@{}}
+\toprule
+\textbf{Desviación} & \textbf{Magnitud} & \textbf{Causa y tratamiento} \\
+\midrule
+
+Viajes sin pareja & 19 pasos en la UPTC & Buses que pasaron por Los Hongos antes del inicio de la ventana de observación; sin tiempo de origen no es posible calcular el tiempo real. Se descartaron y se reportan aquí. \\
+Observación extendida en la UPTC & 20 viajes & Llegadas posteriores al cierre de la ventana en Los Hongos. Se extendió la observación en la UPTC para completar las parejas. \\
+Jornada en día festivo & Jornada 1 (02/11/2026), 7 viajes & Lunes festivo (Todos los Santos). Se conservó y se registró el tipo de día como variable complementaria, solo descriptiva. \\
+Lluvia & Jornadas 1, 2 y 4; 19 viajes & Condición no controlable, prevista en el diseño como variable independiente; no constituye una desviación. \\
+Eventos o cierres viales & 11 de 50 viajes (22\,\%) & Obras (4), parada prolongada (4), accidente (1), cierre vial (1) y evento o aglomeración (1). Condición prevista en el diseño; se conservaron los registros y se anotó el tipo. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Preparación de los datos}
+
+Los registros de ambos observadores se consolidaron en una única base. Para cada paso en Los Hongos se buscó el primer paso posterior de la misma placa en la UPTC, el mismo día y con un tope de 60 minutos. El tiempo real se calculó como la hora de paso en la UPTC menos la hora de paso en Los Hongos, en minutos con un decimal. El error de estimación se calculó siempre como $E = T_{real} - T_{est}$, en tres formas: error con signo ($E$, en minutos), error absoluto ($|E|$) y error porcentual ($E\,\% = E/T_{est} \times 100$). Un valor positivo indica que Google Maps subestimó la duración del viaje y uno negativo, que la sobreestimó.
+
+La codificación de las variables se resume en la Tabla~\ref{tab:codificacion}. La franja horaria se asignó con la hora de paso por Los Hongos: hora pico entre las 7:30 y las 8:30, entre las 11:30 y las 13:30, entre las 14:30 y las 15:30 y entre las 16:30 y las 18:00, y hora no pico en el resto del horario de 6:00 a 18:00. Se codificó como con lluvia todo registro de llovizna, lluvia, lluvia fuerte o granizo, y como sin lluvia los demás. Se codificó como con evento o cierre vial todo viaje con un inconveniente anotado por el observador de Los Hongos. La ocupación visual se mantuvo como variable ordinal (A--F) y se agrupó en baja (hasta 9 pasajeros aproximados), media (hasta 20) y alta (más de 20).
+
+\begin{table}[H]
+\centering
+\caption{Codificación de las variables del estudio}
+\label{tab:codificacion}
+\small
+\begin{tabular}{@{}L{4.1cm} L{2.4cm} L{7.9cm}@{}}
+\toprule
+\textbf{Variable} & \textbf{Escala} & \textbf{Codificación} \\
+\midrule
+Tiempo estimado (min) & Razón & Minutos enteros mostrados por Google Maps al paso del bus por Los Hongos. \\
+Tiempo real (min) & Razón & Hora UPTC $-$ hora Los Hongos, en minutos (un decimal). \\
+Error con signo (min) & Intervalo & $E = T_{real} - T_{est}$; positivo: subestimación. \\
+Error absoluto (min) & Razón & $|E|$. \\
+Error porcentual (\%) & Intervalo & $E/T_{est} \times 100$. \\
+Franja horaria & Nominal & Pico / No pico. \\
+Lluvia & Nominal & Sí (llovizna, lluvia, lluvia fuerte, granizo) / No. \\
+Evento o cierre vial & Nominal & Sí / No; tipo anotado en observaciones. \\
+Ocupación visual & Ordinal & A--F; niveles: baja, media, alta. \\
+Tipo de día (complementaria) & Nominal & Normal / Festivo. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Las filas de ejemplo y las filas vacías de la hoja de emparejamiento no se contaron como observaciones y no se eliminó ningún valor atípico: los errores con signo variaron entre $-3{,}0$ y $12{,}0$ min, valores plausibles para el corredor.
+
+\subsection{Estadística descriptiva}
+
+Los resultados se presentan según la escala de cada variable: media y desviación estándar (DE) para el tiempo estimado, el tiempo real y el error de estimación; mediana para la ocupación visual, que es ordinal; y frecuencias para las variables nominales. La Tabla~\ref{tab:tiempos} resume los tiempos por condición y la Tabla~\ref{tab:error} resume el error de estimación, que responde a los objetivos específicos 1 a 4. La mediana del error con signo se incluye por su asimetría positiva.
+
+\begin{table}[H]
+\centering
+\caption{Tiempo estimado y tiempo real (min) por condición}
+\label{tab:tiempos}
+\small
+\begin{tabular}{@{}l c c c@{}}
+\toprule
+\textbf{Grupo} & \textbf{n} & \textbf{T. estimado M (DE)} & \textbf{T. real M (DE)} \\
+\midrule
+Total & 50 & 20,4 (1,3) & 23,5 (4,8) \\
+\midrule
+Hora pico & 23 & 21,1 (1,0) & 25,1 (5,2) \\
+Hora no pico & 27 & 19,7 (1,2) & 22,0 (4,1) \\
+\midrule
+Con lluvia & 19 & 20,8 (1,2) & 25,6 (5,4) \\
+Sin lluvia & 31 & 20,1 (1,3) & 22,2 (4,0) \\
+\midrule
+Con evento o cierre vial & 11 & 21,1 (1,1) & 29,6 (3,8) \\
+Sin evento o cierre vial & 39 & 20,2 (1,3) & 21,7 (3,5) \\
+\midrule
+Ocupación baja & 19 & 20,1 (1,3) & 22,7 (5,3) \\
+Ocupación media & 20 & 20,6 (1,3) & 23,7 (4,6) \\
+Ocupación alta & 11 & 20,3 (1,3) & 24,3 (4,6) \\
+\midrule
+Día festivo & 7 & 21,4 (0,8) & 24,9 (5,6) \\
+Día normal & 43 & 20,2 (1,3) & 23,2 (4,7) \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\footnotesize{M: media; DE: desviación estándar.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Error de estimación ($T_{real} - T_{est}$) por condición}
+\label{tab:error}
+\small
+\begin{tabular}{@{}l c c c c c@{}}
+\toprule
+ & & \textbf{Error con signo} & \textbf{Mediana} & \textbf{Error abs.} & \textbf{Error \%} \\
+\textbf{Grupo} & \textbf{n} & \textbf{M (DE), min} & \textbf{(min)} & \textbf{medio (min)} & \textbf{medio} \\
+\midrule
+Total & 50 & 3,1 (4,5) & 2,0 & 3,9 & 15,1 \\
+\midrule
+Hora pico & 23 & 4,0 (5,0) & 3,1 & 4,9 & 18,9 \\
+Hora no pico & 27 & 2,3 (3,9) & 1,2 & 3,1 & 12,0 \\
+\midrule
+Con lluvia & 19 & 4,7 (5,3) & 6,0 & 5,6 & 22,8 \\
+Sin lluvia & 31 & 2,1 (3,7) & 1,2 & 3,0 & 10,4 \\
+\midrule
+Con evento o cierre vial & 11 & 8,5 (4,0) & 8,6 & 8,9 & 40,9 \\
+Sin evento o cierre vial & 39 & 1,6 (3,3) & 1,0 & 2,6 & 7,9 \\
+\midrule
+Ocupación baja & 19 & 2,6 (5,0) & 0,0 & 3,7 & 12,8 \\
+Ocupación media & 20 & 3,1 (4,5) & 2,9 & 4,1 & 15,0 \\
+Ocupación alta & 11 & 4,0 (3,9) & 2,6 & 4,1 & 19,3 \\
+\midrule
+Día festivo & 7 & 3,5 (5,2) & 3,1 & 4,6 & 15,9 \\
+Día normal & 43 & 3,0 (4,4) & 2,0 & 3,8 & 15,0 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\footnotesize{M: media; DE: desviación estándar. Positivo: Google Maps subestimó el tiempo.}
+\end{table}
+
+\textbf{Error de estimación global.} En los 50 viajes, el tiempo real promedio (23,5 min; DE = 4,8) superó al tiempo estimado por Google Maps (20,4 min; DE = 1,3). El error con signo promedio fue de 3,1 min (DE = 4,5; mediana = 2,0), el error absoluto medio fue de 3,9 min y el error porcentual promedio fue de 15,1\,\% (DE = 21,6\,\%). Predominó la subestimación: en 30 viajes (60\,\%) el error fue positivo, con un valor medio de 5,9 min; en 13 (26\,\%) fue negativo (sobreestimación), con un valor medio de $-1{,}6$ min; y en 7 (14\,\%) fue nulo. El tiempo estimado varió poco (de 18 a 22 min), mientras que el tiempo real varió entre 17 y 34 min.
+
+\textbf{Hora pico y no pico.} En hora pico (23 viajes) el error con signo promedio fue de 4,0 min (DE = 5,0) y el error absoluto medio de 4,9 min, frente a 2,3 min (DE = 3,9) y 3,1 min en hora no pico (27 viajes).
+
+\textbf{Lluvia.} Con lluvia (19 viajes) el error con signo promedio fue de 4,7 min (DE = 5,3) y el error absoluto medio de 5,6 min; sin lluvia (31 viajes), de 2,1 min (DE = 3,7) y 3,0 min.
+
+\textbf{Eventos o cierres viales.} Con evento o cierre (11 viajes) el error con signo promedio fue de 8,5 min (DE = 4,0) y el error absoluto medio de 8,9 min; sin evento o cierre (39 viajes), de 1,6 min (DE = 3,3) y 2,6 min. Esta fue la condición con mayor diferencia entre grupos.
+
+\textbf{Variables exploratoria y complementaria.} El error con signo promedio fue de 2,6 min con ocupación baja, 3,1 min con media y 4,0 min con alta; en los días festivos fue de 3,5 min y en los normales de 3,0 min. Estas cifras son descriptivas: la asociación entre las variables y el error, así como el contraste de las hipótesis, corresponden a la estadística inferencial.
+
+Las variables nominales y ordinales se resumen con frecuencias en la Tabla~\ref{tab:frecuencias}. La ocupación visual, al ser ordinal, se describe con su mediana, que correspondió al nivel C (aproximadamente 15 pasajeros), tanto en hora pico como fuera de ella y con o sin lluvia.
+
+\begin{table}[H]
+\centering
+\caption{Frecuencias de las variables nominales y ordinales ($N = 50$)}
+\label{tab:frecuencias}
+\small
+\begin{tabular}{@{}l l c c@{}}
+\toprule
+\textbf{Variable} & \textbf{Categoría} & \textbf{Frecuencia} & \textbf{\%} \\
+\midrule
+Franja horaria & Pico & 23 & 46 \\
+ & No pico & 27 & 54 \\
+\midrule
+Lluvia & Con lluvia & 19 & 38 \\
+ & Sin lluvia & 31 & 62 \\
+\midrule
+Clima registrado & Despejado & 18 & 36 \\
+ & Nublado & 13 & 26 \\
+ & Llovizna & 5 & 10 \\
+ & Lluvia & 13 & 26 \\
+ & Lluvia fuerte & 1 & 2 \\
+\midrule
+Evento o cierre vial & Ninguno & 39 & 78 \\
+ & Obras & 4 & 8 \\
+ & Parada prolongada & 4 & 8 \\
+ & Accidente & 1 & 2 \\
+ & Cierre vial & 1 & 2 \\
+ & Evento o aglomeración & 1 & 2 \\
+\midrule
+Ocupación visual (A--F) & A & 4 & 8 \\
+ & B & 15 & 30 \\
+ & C & 12 & 24 \\
+ & D & 8 & 16 \\
+ & E & 7 & 14 \\
+ & F & 4 & 8 \\
+\midrule
+Nivel de ocupación & Baja & 19 & 38 \\
+ & Media & 20 & 40 \\
+ & Alta & 11 & 22 \\
+\midrule
+Tipo de día & Normal & 43 & 86 \\
+ & Festivo & 7 & 14 \\
+\bottomrule
+\end{tabular}
+\end{table}
